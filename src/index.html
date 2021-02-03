@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -24,6 +25,28 @@
     <!-- /.container hero__container -->
   </section>
   <!-- /.hero -->
+
+  <!-- МЕНЮ -->
+  <div class="header">
+    <div class="container header__container"> 
+      <div class="menu">
+        <div class="logo menu__logo">
+          <a href="index.html" class="logo__link">Дина Богданова</a>
+        </div>
+        <nav class="nav menu__nav">
+          <a href="index.html" class="nav__item">Главная</a>
+          <a href="#works" class="nav__item">Работы</a>
+          <a href="#certificates" class="nav__item">Сертификаты</a>
+          <a href="#recommendation" class="nav__item">Рекомендации</a>
+          <a href="#contacts" class="nav__item">Контакты</a>
+        </nav>
+      </div>
+      <!-- /.menu -->
+    </div>
+    <!-- /.container -->
+  </div>
+  <!-- /.header -->
+
   <section class="works" id="works">
     <div class="container works__container">
       <h2 class="title works__title">Мои работы</h2>
@@ -88,7 +111,7 @@
 
   <!-- СЕРТИФИКАТЫ КУРСОВ -->
 
-  <section class="certificates">
+  <section class="certificates" id="certificates">
     <div class="container certificates__container">
       <h2 class="title certificates__title">Сертификаты</h2>
       <div class="cards certificates__cards">
@@ -105,18 +128,37 @@
         </div>
         <!-- /.card certificates__card -->
       </div>
-      <!-- /.cards certificates__cards -->
-      <h2 class="title certificates__title">Рекомендательное письмо</h2>
-      <div class="card certificates__card">
-        <a href="img/certificate-2.jpg" target="_blank" class="certificates__link">
-          <img src="img/certificate-2.jpg" alt="" class="certificates__image">
-        </a>
-      </div>
-     
+      <!-- /.cards certificates__cards -->    
     </div>
     <!-- /.container certificates__container -->
   </section>
   <!-- /.certificates -->
+
+  <section class="recommendation" id="recommendation">
+    <h2 class="title recommendation__title">Рекомендательное письмо</h2>
+      <div class="card recommendation__card">
+        <a href="img/certificate-2.jpg" target="_blank" class="certificates__link">
+          <img src="img/certificate-2.jpg" alt="" class="certificates__image">
+        </a>
+      </div>
+  </section>
+  <!-- /.recommendation -->
+
+  <footer class="footer" id="contacts">
+    <div class="container footer__container">
+      <h2 class="title footer__title">Контакты</h2>
+      <div class="social-links">
+        <a href="https://vk.com/hey_hurricane" target="_blank" class="link social-links__link link--vk"></a>
+        <a href="mailto:dbogdanova92@mail.ru" class="link social-links__link link--mail"></a>
+      </div>
+      <!-- /.social-links -->
+      <p class="copyright">
+        © 2021 | Image: <a class="copyright__link" href="https://unsplash.com/">Unsplash</a>
+			</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+  <!-- /.footer -->
 </body>
 <script src="js/main.js"></script>
 </html>

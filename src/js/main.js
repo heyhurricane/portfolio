@@ -1,7 +1,8 @@
 'use strict';
 
 const scrollingDown = () => {
-  const scrollLink = document.querySelector('.scroll-link');
+  const scrollLinks = document.querySelectorAll('a[href*="#"]');
+  scrollLinks.forEach((scrollLink) => {
     scrollLink.addEventListener('click', (elem) => {
         elem.preventDefault();
         const blockID = scrollLink.getAttribute('href').substr(1);
@@ -12,6 +13,8 @@ const scrollingDown = () => {
           });
         }
       });
+  });
+    
   };
 
   scrollingDown();

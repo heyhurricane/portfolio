@@ -1,3 +1,8 @@
+.container {
+  max-width: 1170px;
+  width: 95%;
+  margin: auto; }
+
 .hero {
   background: url(../img/bg.jpg);
   height: 100vh;
@@ -58,22 +63,49 @@ body {
   text-align: center;
   background: url(../img/arrow.svg) no-repeat center; }
 
-.works, .certificates {
+.header {
+  padding: 20px 0; }
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.logo__link {
+  font-family: 'Pacifico', cursive;
+  text-decoration: none;
+  color: #222;
+  font-size: 20px; }
+  .logo__link:hover {
+    color: #0494ad; }
+
+.nav__item {
+  text-transform: uppercase;
+  font-family: 'Comfortaa', cursive;
+  text-decoration: none;
+  color: #222;
+  margin-right: 1rem;
+  font-size: 14px; }
+  .nav__item:hover {
+    color: #0494ad; }
+
+.works, .certificates, .recommendation {
   padding: 80px 0; }
-  .works__title, .certificates__title {
+  .works__title, .certificates__title, .recommendation__title {
     color: #000000;
     font-size: 30px;
-    margin-bottom: 100px; }
+    margin-bottom: 80px; }
 
-.works__link:hover::before {
-  position: absolute;
-  content: '';
-  width: 100%;
-  height: 98%;
-  background: rgba(158, 84, 6, 0.2); }
-
-.works__card {
-  margin-bottom: 2rem; }
+.works {
+  background: #f5f5f5; }
+  .works__link:hover::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 98%;
+    background: rgba(4, 148, 173, 0.2); }
+  .works__card {
+    margin-bottom: 2rem; }
 
 .cards {
   display: flex;
@@ -104,3 +136,44 @@ body {
 
 .certificates__card {
   margin: auto; }
+
+.recommendation {
+  background: #f5f5f5; }
+  .recommendation__card {
+    margin: auto; }
+
+.footer {
+  padding: 50px 0;
+  background: #222; }
+  .footer__title {
+    font-size: 30px;
+    margin-bottom: 50px; }
+
+.social-links {
+  max-width: 10rem;
+  margin: auto;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 3rem; }
+
+.link {
+  width: 50px;
+  height: 50px; }
+  .link--vk {
+    background: url(../img/vk.svg) no-repeat; }
+  .link--mail {
+    background: url(../img/mail.svg) no-repeat; }
+  .link:hover {
+    transform: scale(1.3);
+    transition: transform 0.2s; }
+
+.copyright {
+  color: #ffffff;
+  text-align: center;
+  margin: 0; }
+  .copyright__link {
+    text-decoration: none;
+    color: #ffffff; }
+    .copyright__link:hover {
+      color: #0494ad; }
