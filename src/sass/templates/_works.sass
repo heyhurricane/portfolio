@@ -1,0 +1,65 @@
+.works
+  background: #ffffff
+  padding: 80px 0
+  &__card
+    margin-bottom: 2rem
+  &__title
+    color: #000000
+    font-size: 30px
+    margin-bottom: 80px
+
+
+.slider
+  max-width: 800px
+  height: 500px
+  margin: auto
+  position: relative
+
+.slider-btn
+  position: absolute
+  top: 50%
+  width: 30px
+  height: 45px
+  outline: none
+  border: none
+  cursor: pointer
+  &--prev
+    left: -10%
+    background: url(../img/arrow-prev.svg) no-repeat center
+  &--next
+    right: -10%
+    background: url(../img/arrow-next.svg) no-repeat center
+
+.slider-dots 
+  // position: absolute
+  bottom: 0
+  width: 100%
+  padding: 0
+  text-align: center
+
+.dot
+  cursor: pointer
+  height: 15px
+  width: 15px
+  margin: 0 5px
+  border-radius: 50%
+  border: none
+  display: inline-block
+  background-color: #dbdbdb
+  transition: background-color, transform .4s, -webkit-transform .4s
+  &-active 
+    background-color: #0494ad
+
+.slide
+  height: 100%
+  display: none
+  &--active
+    display: block
+  &__image
+    object-fit: cover
+    height: 93%
+    width: 100%
+  &__name
+    font-family: 'Comfortaa', cursive
+    text-align: center
+    font-size: 1.2rem

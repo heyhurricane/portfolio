@@ -15,7 +15,7 @@
     <div class="container hero__container">
       <h1 class="title hero__title">Привет! Меня зовут Дина.</h1>
       <h3 class="subtitle hero__subtitle">Я только начинаю свой путь в области веб-разработки</h3>
-      <a href="#works" class="scroll-link">
+      <a href="#header" class="scroll-link">
         <div class="scroll-down hero__scroll-down">
           
         </div>
@@ -27,7 +27,7 @@
   <!-- /.hero -->
 
   <!-- МЕНЮ -->
-  <div class="header">
+  <div class="header" id="header">
     <div class="container header__container"> 
       <div class="menu">
         <div class="logo menu__logo">
@@ -37,7 +37,6 @@
           <a href="index.html" class="nav__item">Главная</a>
           <a href="#works" class="nav__item">Работы</a>
           <a href="#certificates" class="nav__item">Сертификаты</a>
-          <a href="#recommendation" class="nav__item">Рекомендации</a>
           <a href="#contacts" class="nav__item">Контакты</a>
         </nav>
       </div>
@@ -47,63 +46,105 @@
   </div>
   <!-- /.header -->
 
-  <section class="works" id="works">
+  <section class="works">
     <div class="container works__container">
       <h2 class="title works__title">Мои работы</h2>
-      <div class="cards works__cards">
+      <!-- <div class="cards works__cards">
         <div class="card  works__card">
           <div class="card__block">
             <a href="" class="works__link">
               <img src="img/item-1.jpg" alt="" class="card__image">
             </a>
-          </div>
+          </div> -->
           <!-- /.card__block -->
-          
+<!--           
           <h3 class="card__name">Сайт "Турецкий ремонт" с курса Web-start</h3>
-        </div>
+        </div> -->
         <!-- /.card -->
-        <div class="card works__card">
+        <!-- <div class="card works__card">
           <div class="card__block">
             <a href="" class="works__link">
               <img src="img/item-2.jpg" alt="" class="card__image">
             </a> 
-          </div>
+          </div> -->
           <!-- /.card__block -->
-          <h3 class="card__name">Дипломный проект на курсе Web-start</h3>
-        </div>
+          <!-- <h3 class="card__name">Дипломный проект на курсе Web-start</h3>
+        </div> -->
         <!-- /.card -->
-        <div class="card works__card">
+        <!-- <div class="card works__card">
           <div class="card__block">
             <a href="" class="works__link">
               <img src="img/item-3.jpg" alt="" class="card__image">
             </a>
-          </div>
+          </div> -->
           <!-- /.card__block -->
-          <h3 class="card__name">Сайт творческого лагеря для детей</h3>
-        </div>
+          <!-- <h3 class="card__name">Сайт творческого лагеря для детей</h3>
+        </div> -->
         <!-- /.card -->
-        <div class="card works__card">
+        <!-- <div class="card works__card">
           <div class="card__block">
             <a href="" class="works__link">
               <img src="img/item-4.jpg" alt="" class="card__image">
             </a>
-          </div>
+          </div> -->
           <!-- /.card__block -->
-          <h3 class="card__name">Сайт услуг по 3D моделированию с курса JavaScript</h3>
-        </div>
+          <!-- <h3 class="card__name">Сайт услуг по 3D моделированию с курса JavaScript</h3>
+        </div> -->
         <!-- /.card -->
-        <div class="card works__card">
+        <!-- <div class="card works__card">
           <div class="card__block">
             <a href="" class="works__link">
               <img src="img/item-5.jpg" alt="" class="card__image">
             </a>
-          </div>
+          </div> -->
           <!-- /.card__block -->
-          <h3 class="card__name">Дипломный проект на курсе JavaScript</h3>
-        </div>
+          <!-- <h3 class="card__name">Дипломный проект на курсе JavaScript</h3>
+        </div> -->
         <!-- /.card -->
-      </div>
+      <!-- </div> -->
       <!-- /.cards works__cards -->
+
+      <div class="slider">
+        <div class="slide slider__slide slide--active">
+          <h3 class="slide__name">Сайт "Турецкий ремонт" с курса Web-start</h3>
+          <a href="" class="slide__link">
+            <img src="img/item-1.jpg" alt="" class="slide__image">
+          </a>
+        </div>
+        <!-- /.slide slider__slide -->
+        <div class="slide slider__slide">
+          <h3 class="slide__name">Дипломный проект на курсе Web-start</h3>
+          <a href="" class="slide__link">
+            <img src="img/item-2.jpg" alt="" class="slide__image">
+          </a>
+        </div>
+        <!-- /.slide slider__slide -->
+        <div class="slide slider__slide">
+          <h3 class="slide__name">Сайт творческого лагеря для детей</h3>
+          <a href="" class="slide__link">
+            <img src="img/item-3.jpg" alt="" class="slide__image">
+          </a>
+        </div>
+        <!-- /.slide slider__slide -->
+        <div class="slide slider__slide">
+          <h3 class="slide__name">Сайт услуг по 3D моделированию с курса JavaScript</h3>
+          <a href="" class="slide__link">
+            <img src="img/item-4.jpg" alt="" class="slide__image">
+          </a>
+        </div>
+        <!-- /.slide slider__slide -->
+        <div class="slide slider__slide">
+          <h3 class="slide__name">Дипломный проект на курсе JavaScript</h3>
+          <a href="" class="slide__link">
+            <img src="img/item-5.jpg" alt="" class="slide__image">
+          </a>
+        </div>
+        <!-- /.slide slider__slide -->
+        <button class="slider-btn slider-btn--prev"></button>
+        <button class="slider-btn slider-btn--next"></button>
+        <ul class="slider-dots"></ul>
+      </div>
+      <!-- /.slider -->
     </div>
     <!-- /.container works__container -->
   </section>
@@ -113,11 +154,17 @@
 
   <section class="certificates" id="certificates">
     <div class="container certificates__container">
-      <h2 class="title certificates__title">Сертификаты</h2>
+      <h2 class="title certificates__title">Сертификаты и рекомендации</h2>
       <div class="cards certificates__cards">
         <div class="card certificates__card">
           <a href="img/certificate-1.png" target="_blank" class="certificates__link">
             <img src="img/certificate-1.png" alt="" class="certificates__image">
+          </a>
+        </div>
+        <!-- /.card certificates__card -->
+        <div class="card certificates__card">
+          <a href="img/certificate-2.jpg" target="_blank" class="certificates__link">
+            <img src="img/certificate-2.jpg" alt="" class="certificates__image">
           </a>
         </div>
         <!-- /.card certificates__card -->
@@ -134,7 +181,7 @@
   </section>
   <!-- /.certificates -->
 
-  <section class="recommendation" id="recommendation">
+  <!-- <section class="recommendation" id="recommendation">
     <h2 class="title recommendation__title">Рекомендательное письмо</h2>
       <div class="card recommendation__card">
         <a href="img/certificate-2.jpg" target="_blank" class="certificates__link">
@@ -142,7 +189,7 @@
         </a>
       </div>
   </section>
-  <!-- /.recommendation -->
+  /.recommendation -->
 
   <footer class="footer" id="contacts">
     <div class="container footer__container">

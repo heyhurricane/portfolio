@@ -1,0 +1,111 @@
+@media screen and ( max-width: 992px )
+  .container
+    max-width: 760px
+  .slider
+    max-width: 550px
+    height: 350px
+  .slide
+    &__image 
+      height: 90%
+    &__name
+      font-size: 1rem
+  .slider-dots
+    display: none
+
+@media screen and ( max-width: 768px )
+  .container
+    max-width: 570px
+  .cards 
+    flex-direction: column
+  .card
+    max-width: 70%
+    flex-basis: 100%
+  .certificates
+    &__card
+      margin-bottom: 2rem
+  .slider-btn
+    &--next 
+      right: -7%
+    &--prev
+      left: -7%
+  .slider
+    max-width: 500px
+    height: 320px
+
+@media screen and ( max-width: 576px )
+  .container
+    max-width: 90%
+  .slider-btn
+    &--next
+      right: 40%
+    &--prev
+      left: 40%
+  .slide
+    &__name
+      font-size: 0.75rem
+  .slider-btn
+    top: 102%
+  .certificates, .works, .footer
+    &__title 
+      font-size: 19.5px
+
+
+@media screen and ( max-width: 375px )
+  .hero 
+    height: 50vh
+    &__title
+      font-size: 30px
+  .scroll-down 
+    left: 45%
+  .card
+    max-width: 100%
+  .works, .certificates
+    padding: 40px 0 60px
+    &__title 
+      margin-bottom: 40px
+  .slider 
+    max-width: 100%
+    height: 250px
+  .slide__name
+    font-size: 0.6rem
+  .certificates
+    &__title
+      text-align: center
+
+
+
+@media screen and ( min-width: 992px )
+  .logo
+    &__link
+      &:hover
+        color: #0494ad
+  .nav
+    &__item
+      &:hover
+        color: #0494ad
+  .works
+    &__link
+      &:hover
+        &::before
+          position: absolute
+          content: ''
+          width: 100%
+          height: 98%
+          background: rgba(#0494ad, 0.2)
+          // rgba(#9e5406, 0.2)
+  .dot
+    &:hover
+      background-color: #0494ad
+  .certificates
+    &__card
+      &:hover
+        transform: scale(1.1)
+        transition: transform 0.2s
+  .link
+    &:hover
+      transform: scale(1.3)
+      transition: transform 0.2s
+  .copyright
+    &__link
+      &:hover
+        color: #0494ad
