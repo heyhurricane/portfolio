@@ -376,7 +376,7 @@ body {
     height: 200px; }
   .slide__name {
     font-size: 0.6rem;
-    -webkit-font-size: 0.4rem; }
+    -webkit-font-size: 8px; }
   .certificates__title {
     text-align: center; } }
 
