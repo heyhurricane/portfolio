@@ -9,14 +9,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animate.css">
 </head>
 <body>
   <section class="hero">
     <div class="container hero__container">
-      <h1 class="title hero__title">Привет! Меня зовут Дина.</h1>
-      <h3 class="subtitle hero__subtitle">Я только начинаю свой путь в области веб-разработки</h3>
+      <h1 class="title hero__title wow fadeIn">Привет! Меня&nbsp;зовут&nbsp;Дина.</h1>
+      <h3 class="subtitle hero__subtitle wow fadeInUp" data-wow-delay="1s">Я только начинаю свой путь в области веб&#8209;разработки</h3>
       <a href="#header" class="scroll-link">
-        <div class="scroll-down hero__scroll-down">
+        <div class="scroll-down hero__scroll-down wow slideInDown infinite" data-wow-iteration="1" data-wow-delay="2s">
           
         </div>
         <!-- /.scroll-down hero__scroll-down -->
@@ -41,6 +42,16 @@
         </nav>
       </div>
       <!-- /.menu -->
+      <div class="menu-button--light"></div>
+        <div class="burger-menu burger-menu-none">
+          <div class="burger-menu__nav" id="burger-menu">
+            <a href="index.html" class="header__nav-item">Главная</a>
+            <a href="#works" class="header__nav-item ">Работы</a>
+            <a href="#certificates" class="header__nav-item">Сертификаты</a>
+            <a href="#contacts" class="header__nav-item">Контакты</a>
+          </div>
+          <!-- /.menu__nav -->
+        </div>
     </div>
     <!-- /.container -->
   </div>
@@ -49,61 +60,6 @@
   <section class="works">
     <div class="container works__container">
       <h2 class="title works__title">Мои работы</h2>
-      <!-- <div class="cards works__cards">
-        <div class="card  works__card">
-          <div class="card__block">
-            <a href="" class="works__link">
-              <img src="img/item-1.jpg" alt="" class="card__image">
-            </a>
-          </div> -->
-          <!-- /.card__block -->
-<!--           
-          <h3 class="card__name">Сайт "Турецкий ремонт" с курса Web-start</h3>
-        </div> -->
-        <!-- /.card -->
-        <!-- <div class="card works__card">
-          <div class="card__block">
-            <a href="" class="works__link">
-              <img src="img/item-2.jpg" alt="" class="card__image">
-            </a> 
-          </div> -->
-          <!-- /.card__block -->
-          <!-- <h3 class="card__name">Дипломный проект на курсе Web-start</h3>
-        </div> -->
-        <!-- /.card -->
-        <!-- <div class="card works__card">
-          <div class="card__block">
-            <a href="" class="works__link">
-              <img src="img/item-3.jpg" alt="" class="card__image">
-            </a>
-          </div> -->
-          <!-- /.card__block -->
-          <!-- <h3 class="card__name">Сайт творческого лагеря для детей</h3>
-        </div> -->
-        <!-- /.card -->
-        <!-- <div class="card works__card">
-          <div class="card__block">
-            <a href="" class="works__link">
-              <img src="img/item-4.jpg" alt="" class="card__image">
-            </a>
-          </div> -->
-          <!-- /.card__block -->
-          <!-- <h3 class="card__name">Сайт услуг по 3D моделированию с курса JavaScript</h3>
-        </div> -->
-        <!-- /.card -->
-        <!-- <div class="card works__card">
-          <div class="card__block">
-            <a href="" class="works__link">
-              <img src="img/item-5.jpg" alt="" class="card__image">
-            </a>
-          </div> -->
-          <!-- /.card__block -->
-          <!-- <h3 class="card__name">Дипломный проект на курсе JavaScript</h3>
-        </div> -->
-        <!-- /.card -->
-      <!-- </div> -->
-      <!-- /.cards works__cards -->
-
       <div class="slider">
         <div class="slide slider__slide slide--active">
           <h3 class="slide__name">Сайт "Турецкий ремонт" с курса Web-start</h3>
@@ -156,19 +112,19 @@
     <div class="container certificates__container">
       <h2 class="title certificates__title">Сертификаты и рекомендации</h2>
       <div class="cards certificates__cards">
-        <div class="card certificates__card">
+        <div class="card certificates__card wow fadeIn">
           <a href="img/certificate-1.png" target="_blank" class="certificates__link">
             <img src="img/certificate-1.png" alt="" class="certificates__image">
           </a>
         </div>
         <!-- /.card certificates__card -->
-        <div class="card certificates__card">
+        <div class="card certificates__card wow fadeIn" data-wow-delay="0.5s">
           <a href="img/certificate-2.jpg" target="_blank" class="certificates__link">
             <img src="img/certificate-2.jpg" alt="" class="certificates__image">
           </a>
         </div>
         <!-- /.card certificates__card -->
-        <div class="card certificates__card">
+        <div class="card certificates__card wow fadeIn" data-wow-delay="1s">
           <a href="img/certificate-3.png" target="_blank" class="certificates__link">
             <img src="img/certificate-3.png" alt="" class="certificates__image">
           </a>
@@ -181,31 +137,20 @@
   </section>
   <!-- /.certificates -->
 
-  <!-- <section class="recommendation" id="recommendation">
-    <h2 class="title recommendation__title">Рекомендательное письмо</h2>
-      <div class="card recommendation__card">
-        <a href="img/certificate-2.jpg" target="_blank" class="certificates__link">
-          <img src="img/certificate-2.jpg" alt="" class="certificates__image">
-        </a>
-      </div>
-  </section>
-  /.recommendation -->
 
   <footer class="footer" id="contacts">
     <div class="container footer__container">
       <h2 class="title footer__title">Контакты</h2>
       <div class="social-links">
-        <a href="https://vk.com/hey_hurricane" target="_blank" class="link social-links__link link--vk"></a>
-        <a href="mailto:dbogdanova92@mail.ru" class="link social-links__link link--mail"></a>
+        <a href="https://vk.com/hey_hurricane" target="_blank" class="link social-links__link link--vk wow fadeInLeft"></a>
+        <a href="mailto:dbogdanova92@mail.ru" class="link social-links__link link--mail wow fadeInRight"></a>
       </div>
       <!-- /.social-links -->
-      <p class="copyright">
-        © 2021 | Image: <a class="copyright__link" href="https://unsplash.com/">Unsplash</a>
-			</p>
     </div>
     <!-- /.container -->
   </footer>
   <!-- /.footer -->
 </body>
+<script src="js/wow.min.js"></script>
 <script src="js/main.js"></script>
 </html>

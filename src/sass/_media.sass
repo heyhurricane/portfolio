@@ -1,6 +1,46 @@
 @media screen and ( max-width: 992px )
   .container
     max-width: 760px
+  .hero 
+    height: 50vh
+    &__title
+      font-size: 40px
+  .header
+    &__container
+      position: relative
+  .nav
+    display: none
+  .menu-button--light
+    position: absolute
+    right: 0
+    top: 1rem
+    display: block
+    width: 30px
+    height: 2px
+    background-color: #222
+    cursor: pointer
+    &::before
+      content: ''
+      position: absolute
+      right: 0px
+      top: 0px
+      display: block
+      width: 30px
+      height: 2px
+      background-color: #222
+      margin-top: -7px
+      transition: transform 0.2s
+    &::after
+      content: ''
+      position: absolute
+      right: 0px
+      top: 0px
+      display: block
+      width: 30px
+      height: 2px
+      background-color: #222
+      margin-top: 7px
+      transition: transform 0.2s
   .slider
     max-width: 550px
     height: 350px
@@ -11,10 +51,18 @@
       font-size: 1rem
   .slider-dots
     display: none
+  .scroll-down
+    display: none
 
 @media screen and ( max-width: 768px )
   .container
     max-width: 570px
+  .hero
+    &__title
+      font-size: 35px
+      text-align: center
+    &__subtitle
+      text-align: center
   .cards 
     flex-direction: column
   .card
@@ -35,6 +83,9 @@
 @media screen and ( max-width: 576px )
   .container
     max-width: 90%
+  .hero
+    &__title
+      font-size: 30px
   .slider-btn
     &--next
       right: 40%
@@ -52,7 +103,6 @@
 
 @media screen and ( max-width: 375px )
   .hero 
-    height: 50vh
     &__title
       font-size: 30px
   .scroll-down 
