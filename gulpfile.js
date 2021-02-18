@@ -1,3 +1,5 @@
+'use strict'
+
 // const {src, dest, watch, series} = require('gulp');
 const {src, dest, watch} = require('gulp');
 const browserSync = require('browser-sync').create();
@@ -11,6 +13,17 @@ const autoprefixer = require('gulp-autoprefixer');
 // const tinypng = require('gulp-tinypng-compress');
 
 
+function serveSass() {
+    return src("./src/sass/**/*.sass", "./src/sass/**/*.scss")
+        .pipe(sass())
+        .pipe(autoprefixer({
+            cascade: false
+        }))
+        .pipe(dest("./src/css"))
+        .pipe(browserSync.stream());
+}
+
+
 // Static server
 function bs() {
     serveSass();
@@ -22,18 +35,8 @@ function bs() {
     watch("./src/**/*.html").on('change', browserSync.reload);
     watch("./src/js/**/*.js").on('change', browserSync.reload);
     watch("./src/sass/**/*.sass",serveSass);
-};
+}
 
-
-function serveSass() {
-    return src("./src/sass/**/*.sass", "./src/sass/**/*.scss")
-        .pipe(sass())
-        .pipe(autoprefixer({
-            cascade: false
-        }))
-        .pipe(dest("./src/css"))
-        .pipe(browserSync.stream());
-};
 
 // function mincss(done) {
 //     src(['src/**/*.css','!src/**/*.min.css'])
