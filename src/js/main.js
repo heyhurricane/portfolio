@@ -100,8 +100,10 @@ const sliderWorks = () => {
     startSlide(4000);
 
     slider.addEventListener('click', (event) => {
-      event.preventDefault();
       let target = event.target;
+      if (!target.matches('.slide__image')) {
+        event.preventDefault();
+      }
 
       if (!target.matches('.slider-btn, .dot')) {
         return;
