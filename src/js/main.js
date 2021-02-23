@@ -144,12 +144,6 @@ const sliderWorks = () => {
       }
 
       if (!target.matches('.slider-btn, .dot')) {
-        target = event.target;
-        if (hoverActive)  {
-          target = target.childNodes[3].childNodes[3];
-          target.classList.toggle('slide__hover--visible');
-          hoverActive = false;
-        }
         return;
       }
       
