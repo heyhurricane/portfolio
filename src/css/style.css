@@ -489,18 +489,52 @@ body {
 
 .slide {
   height: 100%;
-  display: none; }
-  .slide--active {
-    display: block; }
+  display: none;
+  opacity: 0;
+  transition: opacity 1s; }
   .slide__image {
     -o-object-fit: cover;
     object-fit: cover;
-    height: 93%;
+    height: 99%;
     width: 100%; }
   .slide__name {
     font-family: 'Comfortaa', cursive;
     text-align: center;
     font-size: 1.2rem; }
+  .slide__block {
+    position: relative;
+    height: 93%; }
+  .slide__hover {
+    visibility: hidden;
+    position: absolute;
+    width: 100%;
+    height: 99%;
+    background: rgba(34, 34, 34, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    top: 0;
+    left: 0; }
+    .slide__hover--visible {
+      visibility: visible; }
+  .slide__link {
+    color: #ffffff;
+    font-size: 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Comfortaa', cursive;
+    background-color: rgba(4, 148, 173, 0.8);
+    padding: 10px 20px;
+    width: 6rem;
+    text-align: center;
+    transition: background-color 0.2s;
+    border-radius: 30px; }
+    .slide__link:nth-child(1) {
+      margin-bottom: 2rem; }
+    .slide__link:hover {
+      color: #222;
+      background-color: #ffffff; }
 
 .certificates {
   background: #f5f5f5;
@@ -622,6 +656,8 @@ body {
     height: 90%; }
   .slide__name {
     font-size: 1rem; }
+  .slide__hover {
+    height: 90%; }
   .slider-dots {
     display: none; }
   .scroll-down {
@@ -690,12 +726,6 @@ body {
     color: #0494ad; }
   .nav__item:hover {
     color: #0494ad; }
-  .works__link:hover::before {
-    position: absolute;
-    content: '';
-    width: 100%;
-    height: 98%;
-    background: rgba(4, 148, 173, 0.2); }
   .dot:hover {
     background-color: #0494ad; }
   .certificates__card:hover {

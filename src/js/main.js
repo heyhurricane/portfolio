@@ -57,6 +57,9 @@ const sliderWorks = () => {
   const slider = document.querySelector('.slider'),
         slide = slider.querySelectorAll('.slide'),
         sliderDots = document.querySelector('.slider-dots');
+        // slideActive = document.querySelector('.slide-active');
+
+  let hoverActive = false;
 
     for (let i = 0; i < slide.length; i++) {
       const li = document.createElement('li');
@@ -64,6 +67,10 @@ const sliderWorks = () => {
       sliderDots.append(li);
     }
 
+    
+    slide[0].style.display = 'block';
+    slide[0].clientHeight;
+    slide[0].style.opacity = 1;
     const dot = document.querySelectorAll('.dot');
     dot[0].classList.add('dot-active');
   
@@ -71,16 +78,41 @@ const sliderWorks = () => {
     interval;
 
   const prevSlide = (elem, index, strClass) => { 
-      elem[index].classList.remove(strClass);
+     
+      if (strClass === 'slide--active') {
+        elem[index].classList.add('fade');
+        // elem[index].style.opacity = 0;
+        elem[index].style.display = 'none';
+        elem[index].clientHeight; // Forces the browser to "reflow"
+        elem[index].style.opacity = 0;
+        elem[index].classList.remove(strClass);
+      }
+      else {
+        elem[index].classList.remove(strClass);
+      }
+      
+      
     };
 
     const nextSlide = (elem, index, strClass)  => { 
-      elem[index].classList.add(strClass);
+      if (strClass === 'slide--active') {
+        elem[index].classList.remove('fade');
+        // elem[index].style.opacity = 1;
+        elem[index].style.display = 'block';
+        elem[index].clientHeight; // Forces the browser to "reflow"
+        elem[index].style.opacity = 1;
+        elem[index].classList.add(strClass);
+      }
+      else {
+        elem[index].classList.add(strClass);
+      }
+      
     };
 
     const autoPlaySlide = () => {
       prevSlide(slide, currentSlide, 'slide--active');
       prevSlide(dot, currentSlide, 'dot-active');
+
       currentSlide++;
       if (currentSlide>=slide.length) {
         currentSlide = 0;
@@ -101,7 +133,7 @@ const sliderWorks = () => {
 
     slider.addEventListener('click', (event) => {
       let target = event.target;
-      if (!target.matches('.slide__image')) {
+      if (!target.matches('.slide__link')) {
         event.preventDefault();
       }
 
@@ -134,24 +166,48 @@ const sliderWorks = () => {
       }
       nextSlide(slide, currentSlide, 'slide--active');
       nextSlide(dot, currentSlide, 'dot-active');
+      
+
 
     });
 
     slider.addEventListener('mouseover', (event) => {
       let target = event.target;
 
-      if (target.matches('.slider-btn, .dot')) {
+      if (target.matches('.slider-btn, .dot, .slide__image, .slide__hover--visible')) {
         stopSlide();
       }
+    });
+
+    slide.forEach((elem) => {
+      elem.addEventListener('mouseenter', (event) => {
+      let target = event.target;
+      if (target.matches('.slide--active') && !hoverActive)  {
+        target = target.childNodes[3].childNodes[3];
+        target.classList.toggle('slide__hover--visible');
+        hoverActive = true;
+      }
+      });
+
+      elem.addEventListener('mouseleave', (event) => {
+        let target = event.target;
+        if (target.matches('.slide--active') && hoverActive) {
+          target = target.childNodes[3].childNodes[3];
+          target.classList.toggle('slide__hover--visible');
+          hoverActive = false;
+        }
+      });
     });
 
     slider.addEventListener('mouseout', (event) => {
       let target = event.target;
 
-      if (target.matches('.slider-btn, .dot')) {
-        startSlide(4000);
+      if (target.matches('.slider-btn, .dot, .slide__image, .slide__hover--visible')) {
+          startSlide(4000);
       }
     });
+
+
 };
 
 sliderWorks();
