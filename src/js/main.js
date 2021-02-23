@@ -144,6 +144,12 @@ const sliderWorks = () => {
       }
 
       if (!target.matches('.slider-btn, .dot')) {
+        target = event.target;
+        if (hoverActive)  {
+          target = target.childNodes[3].childNodes[3];
+          target.classList.toggle('slide__hover--visible');
+          hoverActive = false;
+        }
         return;
       }
       
@@ -187,12 +193,12 @@ const sliderWorks = () => {
 
     slide.forEach((elem) => {
       elem.addEventListener('mouseenter', (event) => {
-      let target = event.target;
-      if (target.matches('.slide--active') && !hoverActive)  {
-        target = target.childNodes[3].childNodes[3];
-        target.classList.toggle('slide__hover--visible');
-        hoverActive = true;
-      }
+        let target = event.target;
+        if (target.matches('.slide--active') && !hoverActive)  {
+          target = target.childNodes[3].childNodes[3];
+          target.classList.toggle('slide__hover--visible');
+          hoverActive = true;
+        }
       });
 
       elem.addEventListener('mouseleave', (event) => {
