@@ -90,6 +90,7 @@ const sliderWorks = () => {
       else {
         elem[index].classList.remove(strClass);
       }
+      hoverActive = false;
       
       
     };
@@ -106,23 +107,28 @@ const sliderWorks = () => {
       else {
         elem[index].classList.add(strClass);
       }
+      hoverActive = false;
       
     };
 
     const autoPlaySlide = () => {
-      prevSlide(slide, currentSlide, 'slide--active');
-      prevSlide(dot, currentSlide, 'dot-active');
+      // if (window.screen.width > 992) {
+        prevSlide(slide, currentSlide, 'slide--active');
+        prevSlide(dot, currentSlide, 'dot-active');
 
-      currentSlide++;
-      if (currentSlide>=slide.length) {
-        currentSlide = 0;
-      }
-      nextSlide(slide, currentSlide, 'slide--active');
-      nextSlide(dot, currentSlide, 'dot-active');
+        currentSlide++;
+        if (currentSlide>=slide.length) {
+          currentSlide = 0;
+        }
+        nextSlide(slide, currentSlide, 'slide--active');
+        nextSlide(dot, currentSlide, 'dot-active');
+      // }
     };
 
     const startSlide = (time = 3000) => {
-      interval = setInterval(autoPlaySlide, time);
+      if (window.screen.width > 992) {
+        interval = setInterval(autoPlaySlide, time);
+      }
     };
 
     const stopSlide = () => {
@@ -206,7 +212,6 @@ const sliderWorks = () => {
           startSlide(4000);
       }
     });
-
 
 };
 
