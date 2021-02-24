@@ -180,7 +180,7 @@ const sliderWorks = () => {
     slider.addEventListener('mouseover', (event) => {
       let target = event.target;
 
-      if (target.matches('.slider-btn, .dot, .slide__image, .slide__hover--visible')) {
+      if (target.matches('.slider-btn, .dot, .slide__image, .slide__hover--visible, .slide__link')) {
         stopSlide();
       }
     });
@@ -208,7 +208,7 @@ const sliderWorks = () => {
     slider.addEventListener('mouseout', (event) => {
       let target = event.target;
 
-      if (target.matches('.slider-btn, .dot, .slide__image, .slide__hover--visible')) {
+      if (target.matches('.slider-btn, .dot, .slide__image, .slide__hover--visible, .slide__link')) {
           startSlide(4000);
       }
     });
